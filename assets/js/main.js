@@ -26,11 +26,11 @@ const elementUserAge = document.getElementById("user_age").value;
 // imposto lo sconto a zero
 let discount = 0; 
 
-if (user_age < 18) {
+if (elementUserAge < 18) {
     discount = ((full_price * 20) / 100);
     // calcolo lo sconto per minorenni
     console.log(`sconto minorenni ottenuto: ${discount}`);
-} else if (user_age > 65) {
+} else if (elementUserAge > 65) {
     discount = ((full_price * 40) / 100);
     // calcolo lo sconto per over 65
     console.log(`sconto over 65 ottenuto: ${discount}`);
