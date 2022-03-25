@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+.h_200 {
+    height: 200px;
+}
 
 
 .price_calculator {
     margin: 0 auto;
+}
+
+.ticket_generator .container {
+    height: 300px;
 }

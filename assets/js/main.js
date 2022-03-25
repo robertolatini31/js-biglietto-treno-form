@@ -2,6 +2,8 @@
 
 const elementBtnGenerator = document.getElementById('btn_generation');
 
+// collego la funzione al click del bottone per generare il biglietto
+
 elementBtnGenerator.addEventListener("click", function() {
 
         //funzione calcolo prezzo biglietto
@@ -45,6 +47,21 @@ if (elementUserAge < 18) {
 const final_price = (full_price - discount);
 
 console.log(`prezzo biglietto calcolato: ${final_price.toFixed(2)}`);
+
+// scrivo nome passeggero sul biglietto
+
+document.getElementById('user_ticket_name').innerHTML += elementUserName;
+
+// scrivo lo sconto sul biglietto
+
+if (elementUserAge < 18) {
+    document.getElementById('ticket_discount').innerHTML = 'Sconto <br> Minorenne';
+} else if (elementUserAge > 65) {
+    document.getElementById('ticket_discount').innerHTML = 'Sconto <br> Over-65';
+} else {
+    document.getElementById('ticket_discount').innerHTML = 'Prezzo <br> Intero';
+}
+
 
 
 })
