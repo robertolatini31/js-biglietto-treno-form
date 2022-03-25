@@ -50,7 +50,7 @@ console.log(`prezzo biglietto calcolato: ${final_price.toFixed(2)}`);
 
 // scrivo nome passeggero sul biglietto
 
-document.getElementById('user_ticket_name').innerHTML += elementUserName;
+document.getElementById('user_ticket_name').innerHTML = elementUserName;
 
 // scrivo lo sconto sul biglietto
 
@@ -62,8 +62,38 @@ if (elementUserAge < 18) {
     document.getElementById('ticket_discount').innerHTML = 'Prezzo <br> Intero';
 }
 
+// scrivo il numero di carrozza sul biglietto
+
+let rnd_number = (Math.floor(Math.random() * 100) + 1);
+
+document.getElementById('carriage_number').innerHTML = rnd_number;
+
+// scrivo codice cp sul biglietto
+
+let rnd_cp_number = (Math.floor(Math.random() * 100000) + 1).toFixed();
+
+document.getElementById('cp_number').innerHTML = rnd_cp_number;
+
+// scrivo il prezzo sul biglietto
+
+document.getElementById('ticket_final_price').innerHTML = `${final_price.toFixed(2)} &euro;`;
+
+// mostro a schermo il biglietto compilato
+
+document.querySelector('.ticket_generator').classList.add('d-block');
+    
+    }
+);
 
 
-})
+// collego il bottone di cancellazione biglietto
 
+const elementBtnCancel = document.getElementById('btn_cancel');
 
+// collego la funzione al click del bottone per cancellare il biglietto
+
+elementBtnCancel.addEventListener("click", function() {
+    document.querySelector('.ticket_generator').classList.remove('d-block');
+    
+    }
+);

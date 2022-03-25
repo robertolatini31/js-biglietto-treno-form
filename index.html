@@ -14,7 +14,7 @@
 
     <main id="site_main">
 
-        <section class="price_calculator">
+        <section class="price_calculator py-4">
 
             <h2 class="text-white text-center text-uppercase p-4">calcola il prezzo del tuo biglietto</h2>
             
@@ -58,7 +58,7 @@
         </section>
         <!-- /.price_calculator -->
 
-        <section class="ticket_generator">
+        <section class="ticket_generator py-4">
 
             <h2 class="text-white text-center text-uppercase p-4">il tuo biglietto</h2>
 
@@ -68,8 +68,9 @@
 
                 <div class="row row-cols-1 row-cols-lg-5 border-top border-bottom mx-2">
 
-                    <div class="col h_200 py-4 bg-dark text-white">
-                        <h5 id="user_ticket_name">NOME PASSEGGERO: <br></h5>
+                    <div class="col h_200 py-4 bg-dark text-white d-flex flex-column">
+                        <h5>NOME PASSEGGERO:</h5>
+                        <h5 id="user_ticket_name" ></h5>
                     </div>
                     <!-- /.col -->
 
@@ -77,6 +78,25 @@
                         <h5>Offerta</h5>
                         <p id="ticket_discount"></p>
                     </div>
+                    <!-- /.col -->
+
+                    <div class="col h_200 py-3 d-flex flex-column justify-content-evenly">
+                        <h5>Carrozza</h5>
+                        <p id="carriage_number"></p>
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col h_200 py-3 d-flex flex-column justify-content-evenly">
+                        <h5>Codice<br>CP</h5>
+                        <p id="cp_number"></p>
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col h_200 py-3 d-flex flex-column justify-content-evenly">
+                        <h5>Costo<br>biglietto</h5>
+                        <p id="ticket_final_price"></p>
+                    </div>
+                    <!-- /.col -->
                 </div>
                 <!-- /.row px-5 pd2 -->
                 

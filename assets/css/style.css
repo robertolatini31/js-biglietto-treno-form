@@ -13,6 +13,9 @@
     margin: 0 auto;
 }
 
-.ticket_generator .container {
-    height: 300px;
+
+
+.ticket_generator {
+    
+    display: none;
 }
