@@ -94,6 +94,7 @@ const elementBtnCancel = document.getElementById('btn_cancel');
 
 elementBtnCancel.addEventListener("click", function() {
     document.querySelector('.ticket_generator').classList.remove('d-block');
+    document.getElementById('my_form').reset();
     
     }
 );
