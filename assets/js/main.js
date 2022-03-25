@@ -16,7 +16,9 @@ console.log(`il nome utente è ${elementUserName}`);
 
 // prendere km da fare
 
-const elementUserKm = document.getElementById("km_to_go").value;
+let elementUserKm = 0;
+
+elementUserKm = document.getElementById("km_to_go").value;
 
 console.log(`i km inseriti sono ${elementUserKm}`);
 
@@ -79,10 +81,10 @@ document.getElementById('cp_number').innerHTML = rnd_cp_number;
 document.getElementById('ticket_final_price').innerHTML = `${final_price.toFixed(2)} &euro;`;
 
 // mostro a schermo il biglietto compilato
-
+if (elementUserKm != 0) {
 document.querySelector('.ticket_generator').classList.add('d-block');
-    
-    }
+}
+}
 );
 
 
