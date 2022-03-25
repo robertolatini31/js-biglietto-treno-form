@@ -1,5 +1,10 @@
+// collego il bottone di generazione biglietto
 
-//funzione calcolo prezzo biglietto
+const elementBtnGenerator = document.getElementById('btn_generation');
+
+elementBtnGenerator.addEventListener("click", function() {
+
+        //funzione calcolo prezzo biglietto
 
 // prendere età utente
 
@@ -11,7 +16,7 @@ console.log(`il nome utente è ${elementUserName}`);
 
 const elementUserKm = document.getElementById("km_to_go").value;
 
-console.log(`il nome utente è ${elementUserKm}`);
+console.log(`i km inseriti sono ${elementUserKm}`);
 
 // prezzo per km 0.21$
 
@@ -40,3 +45,8 @@ if (elementUserAge < 18) {
 const final_price = (full_price - discount);
 
 console.log(`prezzo biglietto calcolato: ${final_price.toFixed(2)}`);
+
+
+})
+
+
